@@ -9,7 +9,15 @@ console.log(letters[1]);
 // --------------------------------------
 // Exercise 2 - Array Positioning
 
-const friends = [{ name: "Ana" }, { name: "Maria" }, { name: "Sofia" }];
+/* const friends = [{ name: "x" }, { name: "x" }, { name: "x" }];
+console.log(friends); */
+const friends = [];
+
+const obj1 = { x: 1 };
+const obj2 = { x: 1 };
+const obj3 = { x: 1 };
+
+friends.push(obj1, obj2, obj3);
 console.log(friends);
 
 // What a lonely array. Add at least 3 friend objects to it.
@@ -40,7 +48,8 @@ console.log(diet);
 
 // --------------------------------------
 // Exercise 6 - Copy array
-const dinnerTray = diet.slice();
+const dinnerTray = diet.slice(); // [...diet]
+//const dinnerTray1 = Array.from(diet);
 console.log(dinnerTray);
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.
 
@@ -49,8 +58,9 @@ console.log(dinnerTray);
 
 const moreLetters = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
-for (i = 0; i < 1; i++);
-console.log(moreLetters[i]);
+for (let i = 1; i < moreLetters.length; i += 2) {
+  console.log(moreLetters[i]);
+}
 
 // log every second char in the array starting from b
 
@@ -58,8 +68,15 @@ console.log(moreLetters[i]);
 // Exercise 8 - For loop and if statement
 
 const numbers = [5, 3, 2, 7, 11, 12, 0, -20, 6];
-
 const discardedNumbers = [];
+for (i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 6 || numbers[i] < 0) {
+    console.log(numbers[i]);
+  } else {
+    discardedNumbers.push(numbers[i]);
+  }
+}
+console.log(discardedNumbers);
 
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers

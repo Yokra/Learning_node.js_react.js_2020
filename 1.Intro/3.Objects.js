@@ -14,8 +14,8 @@ console.log(myObj.message);
 // Create an object that has your name and age.
 
 var info = {
-  name: "Yordanka",
-  age: "100",
+  name: "X",
+  age: 10,
 };
 
 // --------------------------------------
